@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 class MainProgram {
 
     //Attribute
@@ -20,6 +22,7 @@ class MainProgram {
         System.out.println("Summe aller Zahlen im Array: " + sumUp(numbers));
         System.out.println("In diesem Array gibt es " + countNegatives(numbers) + " negative Zahlen.");
         System.out.println("Summe der negativen Zahlen: " + sumUpNegatives(numbers));
+        findMaximus(numbers);
     }
 
     private static void fillArray(int[] array, boolean wN, int maxA){
@@ -56,7 +59,10 @@ class MainProgram {
      */
     private static int sumUp(int[] array){
         int result = 0;
-        //Hier muss Quellcode ergänzt werden.
+        for (int i=0;i<array.length;i++){
+            result=result+array[i];
+        }
+
         return result;
     }
 
@@ -69,7 +75,7 @@ class MainProgram {
      */
     private static int countNegatives(int[] array){
         int result = 0;
-        //Hier muss Quellcode ergänzt werden.
+        //for(int i;i)
         return result;
     }
 
@@ -93,6 +99,16 @@ class MainProgram {
      * übergeben bekommt und die den größten Wert in diesem Array zurückgibt.
      * Tipp: Versuchen Sie, mit einem Durchlauf durch das Array zu kommen.
      */
+    public static void findMaximus(int [] array){
+        int max=array[0];
+        for(int i = 1; i<array.length; i++){
+            if(max<array[i])
+                max=array[i];
+        }
+        System.out.println("Hoechste zahl im Array: "+max);
+    }
+
+
 
 
 
@@ -101,6 +117,11 @@ class MainProgram {
      * übergeben bekommt und die den Index des größten Werts in diesem Array zurückgibt.
      * Tipp: Versuchen Sie, mit einem Durchlauf durch das Array zu kommen.
      */
+
+    public static int findMaximumIndex(int []array){
+        int maxindex=0;
+
+    }
 
 
 
@@ -137,4 +158,4 @@ class MainProgram {
      */
 
 
-}
+
